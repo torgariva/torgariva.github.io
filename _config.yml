@@ -356,7 +356,7 @@ plugins:
 #   publisher:           <id>
 #   admins:              <id>
 
-Used on index and about sites
+#Used on index and about sites
 social:
   name:
     - Twitter
