@@ -357,13 +357,13 @@ plugins:
 #   admins:              <id>
 
 #Used on index and about sites
-social:
-  name:
-    - Twitter
-    - Github
-  links:
-    - https://twitter.com/<username>
-    - https://github.com/torgariva
+# social:
+#   name:
+#     - Twitter
+#     - Github
+#   links:
+#     - https://twitter.com/<username>
+#     - https://github.com/<username>
 
 
 # Plugin Configs
