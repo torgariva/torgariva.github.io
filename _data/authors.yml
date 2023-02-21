@@ -26,7 +26,7 @@ author:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         torgariva
+    #twitter:         <username>
     github:          torgariva
     # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
