@@ -55,6 +55,10 @@ author:
 menu:
   # - title:             Example
   #   url:               /example/
+  - title:             Blog
+    url:               /blog/
+  - title:             Training
+    url:               /training/
   - title:             Documentation
     url:               /docs/
   - title:             About
