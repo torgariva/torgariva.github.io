@@ -9,7 +9,7 @@ url:                   https://torgariva.github.io
 # When your site is in a subdirectory, set to `/<name of directory>`,
 # with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-baseurl:               ''
+# baseurl:               '/hydejack-starter-kit'
 
 
 # General settings
@@ -20,45 +20,50 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 itorres
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
-description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+description:           Menu 
 
 # A shorter description for the sidebar.
-tagline:               A boutique Jekyll theme
+tagline:               
 
 # A list of keywords for your blog
-keywords:              [jekyll, theme, hyde, sidebar, resume, markdown, code, math, portfolio, personal]
+keywords:
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/logo.png
+#logo:                  /assets/icons/itorres_logo.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                Florian Klampfer
-  email:               mail@qwtel.com
-  # Used by `jekyll-seo-tag`:
-  twitter:             qwtel
+  name:                Ivan Torres
+  email:               torgariva@gmail.com
+  social:
+    github: torgariva
+    linkedin: iván-torres-garcía-736410200
+    email: torgariva@gmail.com
+    # # matrix: '@austin:tchncs.de'
+    # # mastodon: 'https://mstdn.ca/@austin'
+    # # reddit: austinhuang
+  # # Used by `jekyll-seo-tag`:
+  # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
+  # - title:             Example
+  #   url:               /example/
   - title:             Blog
     url:               /blog/
-  - title:             Showcase
-    url:               /showcase/
-  - title:             Résumé*
-    url:               /resume/
+  - title:             Training
+    url:               /training/
   - title:             Documentation
     url:               /docs/
-  - title:             Download
-    url:               /download/
+  - title:             About
+    url:               /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -71,30 +76,28 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             >
-  \* Not included in free version
+copyright:             © 2023. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:categories/:year-:month-:day-:title/
+permalink:             /:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /blog/:num/
+paginate_path:         /:num/
 
 
 # Theme
 # ---------------------------------------------------------------------------------------
 
-theme: jekyll-theme-hydejack
-# remote_theme: hydecorp/hydejack@v9
+#theme: jekyll-theme-hydejack
+remote_theme: hydecorp/hydejack@v9
 
-destination: build
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
-
+ 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/background/background.jpeg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -116,8 +119,6 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # The font used for code blocks. Expects a string that is a valid CSS font-family value.
 font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
-
-clap_button:           false
 
 defaults:
   # You can use this to provide a default accent color and background for
@@ -168,7 +169,7 @@ defaults:
         type:          WebPage
 
 kramdown:
-  math_engine:         katex
+  math_engine:         mathjax
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
@@ -182,11 +183,11 @@ kramdown:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                qwtel
+# disqus:                <username>
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
-tinyletter:            qwtel
+# tinyletter:            <username>
 
 
 # Hydejack Settings
@@ -262,7 +263,7 @@ hydejack:
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   # Note that this setting has no effect when using the free version.
-  advertise:           true
+  advertise:           false
 
   # Buyers of the PRO version can opt to hide all dates from the theme.
   # Frequent consumers of online content will know that nothing devalues a post like
@@ -299,15 +300,15 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /blog/:name/
+    permalink:         /:name/
     output:            true
 
   featured_tags:
     permalink:         /tag-:name/
     output:            true
 
-  showcase:
-    permalink:         /showcase/:path/
+  projects:
+    permalink:         /projects/:path/
     output:            true
 
 
@@ -315,10 +316,7 @@ collections:
 # ----------------------------------------------------------------------------------------
 
 exclude:
-  - ./#jekyll-theme-hydejack/node_modules
-  - ./#jekyll-theme-hydejack/.git
   - .jekyll-cache
-  - _zip
   - .sass-cache
   - '*.toml'
   - vendor
@@ -351,7 +349,7 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-google_site_verification: kRoh_csFULhK6lxBJwZOxiWYQpvttOkFj0a3lWwQADc
+# google_site_verification: <verification-id>
 # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
@@ -360,8 +358,8 @@ google_site_verification: kRoh_csFULhK6lxBJwZOxiWYQpvttOkFj0a3lWwQADc
 #   yandex:              <verification-id>
 
 # Used for twitter cards
-twitter:
-  username:            qwtel
+# twitter:
+#   username:            <username>
 
 # Used for facebook open graph
 # facebook:
@@ -369,9 +367,11 @@ twitter:
 #   publisher:           <id>
 #   admins:              <id>
 
-# Used on index and about sites
+#Used on index and about sites
 # social:
-#   name:                <firstname> <lastname>
+#   name:
+#     - Twitter
+#     - Github
 #   links:
 #     - https://twitter.com/<username>
 #     - https://github.com/<username>
@@ -402,7 +402,6 @@ compress_html:
 
 sass:
   style:               compressed
-
 
 # Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------
